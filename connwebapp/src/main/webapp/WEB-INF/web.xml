@@ -10,7 +10,10 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:connwebapp-servlet.xml</param-value>
+            <param-value>
+                classpath:connwebapp-servlet.xml
+                classpath:connwebapp-jdbc.xml
+            </param-value>
         </init-param>
         <load-on-startup>99</load-on-startup>
     </servlet>
@@ -35,5 +38,12 @@
         <filter-name>charsetFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <resource-ref>
+        <description>Connwebapp Datasource</description>
+        <res-ref-name>jdbc/DSConnwebapp</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 
 </web-app>

@@ -1,0 +1,8 @@
+CREATE DATABASE connectionpool DEFAULT COLLATE utf8_general_ci;
+
+CREATE TABLE item
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  title MEDIUMTEXT NOT NULL,
+  PRIMARY KEY (id)
+);
