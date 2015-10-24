@@ -6,12 +6,17 @@
     <New id="ConnwebappDS" class="org.eclipse.jetty.plus.jndi.Resource">
         <Arg>jdbc/DSConnwebapp</Arg>
         <Arg>
+            <!-- http://www.mchange.com/projects/c3p0/#configuration_properties -->
             <New class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		        <Set name="DriverClass">com.mysql.jdbc.Driver</Set>
                 <Set name="jdbcUrl">jdbc:mysql://localhost/connectionpool</Set>
         		<Set name="User">root</Set>
         		<Set name="Password">password</Set>
                 <Set name="maxIdleTime">3600</Set>
+                <Set name="initialPoolSize">2</Set>
+                <Set name="minPoolSize">2</Set>
+                <Set name="maxPoolSize">3</Set>
+                <Set name="checkoutTimeout">3</Set>
             </New>
         </Arg>
     </New>
