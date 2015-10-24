@@ -117,12 +117,12 @@
                     <httpConnector>
                         <port>9000</port>
                     </httpConnector>
-                    <!--<systemProperties>-->
-                        <!--<systemProperty>-->
-                            <!--<name>logback.configurationFile</name>-->
-                            <!--<value>./src/test/resources/logback.xml</value>-->
-                        <!--</systemProperty>-->
-                    <!--</systemProperties>-->
+                    <systemProperties>
+                        <systemProperty>
+                            <name>logback.configurationFile</name>
+                            <value>logback.xml</value>
+                        </systemProperty>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
