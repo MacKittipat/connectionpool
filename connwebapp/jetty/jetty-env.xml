@@ -16,7 +16,7 @@
                 <Set name="initialPoolSize">2</Set>
                 <Set name="minPoolSize">2</Set>
                 <Set name="maxPoolSize">3</Set>
-                <Set name="checkoutTimeout">3</Set>
+                <!--<Set name="checkoutTimeout">3</Set>-->
             </New>
         </Arg>
     </New>
